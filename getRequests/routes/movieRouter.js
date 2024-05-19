@@ -24,12 +24,10 @@ movieRouter.get("/:movieId", (req, res) => {
   movieId = req.params.movieId;
   foundMovie = movies.find((movie) => movie._id === movieId);
   if (foundMovie) {
-     res.send(foundMovie);
+    res.send(foundMovie);
+  } else if (!foundMovie) {
+    res.status(404).send("No movies found by that name or id");
   }
-  else if (!foundMovie) {
-    res.status(404).send("No movies found by that name or id")
-  }
- 
 });
 
 //get by genre
@@ -52,7 +50,18 @@ movieRouter.delete("/:movieId", (req, res) => {
   const movieId = req.params.movieId;
   const movieIndex = movies.findIndex((movie) => movie._id === movieId);
   movies.splice(movieIndex, 1);
-  res.send(` Suuccessfully Deleted a movie with the ID of  ${movieId} from the DataBase`);
+  res.send(
+    ` Suuccessfully Deleted a movie with the ID of ${movieId} from the DataBase`
+  );
+});
+
+//update one
+movieRouter.put("/:movieId", (req, res) => {
+  const movieId = req.params.movieId;
+  const updatedObject = req.body
+  const movieIndex = movies.findIndex((movie) => movie._id === movieId);
+  const updatedMovie = Object.assign(movies[movieIndex],updatedObject);
+  res.send(updatedMovie)
 });
 
 module.exports = movieRouter;
