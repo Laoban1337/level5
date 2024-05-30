@@ -1,0 +1,137 @@
+/* Base styling for the navigation container */
+.navigation {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Styling for the <nav> element */
+.navigation nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the <ul> element */
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Styling for each <li> element */
+.navigation li {
+  padding: 14px 20px;
+}
+
+/* Styling for the links in the navigation bar */
+.navigation li {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect for the links */
+.navigation li:hover {
+  background-color: #575757;
+  cursor: pointer;
+}
+
+/* Additional styling for the header */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cleaner-box {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.cleaner-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cleaner-box li {
+  margin-bottom: 10px;
+}
+
+.cleaner-box li:last-child {
+  margin-bottom: 0;
+}
+
+.cleaner-box li > * {
+  margin-right: 10px;
+}
+
+.cleaner-name {
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* CSS for the chore boxes */
+.chore-box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* CSS for the h2 inside each chore box */
+.chore-box h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* CSS for the ul inside each chore box */
+.chore-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* CSS for the li inside each chore box */
+.chore-box li {
+  font-size: 16px;
+}
+
+/* CSS for the h1 */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style for the container */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for the h2 */
+.about-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Style for the paragraphs */
+.about-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.completed-chore {
+  text-decoration: line-through;
+  color: red;
+  border: 3px solid violet;
+  border-radius: 50%;
+}

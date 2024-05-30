@@ -17,25 +17,34 @@
 //   }
 
 //   // Example usage:
-//   let inputString = "apple bubbie kitty";
-//   let uniqueChars = findUnique(inputString);
-//   console.log(uniqueChars); // "helo wrd"
-
-// // const words = ['apple', 'banana', 'cherry'];
-// // const uniqueChars = extractUniqueCharacters(words);
-// // console.log(uniqueChars); // Output: ['a', 'p', 'l', 'e', 'b', 'n', 'c', 'h', 'r', 'y']
+// //   let inputString = "apple bubbie kitty";
+// //   let uniqueChars = findUnique(inputString);
+// //   console.log(uniqueChars); // "helo wrd"
+// function extractUniqueCharacters(arr){
+//     const unique = []
+//     const allCharacters = arr.join("").split("")
+//     allCharacters.map(char => {
+//         if (!unique.includes(char)){
+//             unique.push(char)
+//         }
+//     })
+//     return unique
+// }
+// const words = ['apple', 'banana', 'cherry'];
+// const uniqueChars = extractUniqueCharacters(words);
+// console.log(uniqueChars); // Output: ['a', 'p', 'l', 'e', 'b', 'n', 'c', 'h', 'r', 'y']
 
 function sortByProperty(objects, propertyName) {
-    return objects.sort((a, b) => {
-      if (a[propertyName] < b[propertyName]) {
-        return -1;
-      }
-      if (a[propertyName] > b[propertyName]) {
-        return 1;
-      }
-      return 0;
-    });
-  }
+  return objects.sort((a, b) => {
+    if (a[propertyName] < b[propertyName]) {
+      return -1;
+    }
+    if (a[propertyName] > b[propertyName]) {
+      return 1;
+    }
+    return 0;
+  });
+}
 const people = [
   { name: "Alice", age: 30 },
   { name: "Bob", age: 25 },
@@ -46,5 +55,20 @@ const people = [
 const sortedByAge = sortByProperty(people, "age");
 console.log(sortedByAge);
 
-// const sortedByName = sortByProperty(people, "name");
-// console.log(sortedByName);
+const sortedByName = sortByProperty(people, "name");
+console.log(sortedByName);
+
+function generateTable(num) {
+  // create for loop
+  for (let i = 1; i < 11; i++) {
+ 
+    console.log(`${num} * ${i} = ${num * i}`);
+  }
+}
+
+generateTable(5);
+
+//1-10
+// 5 * 1 = 5
+// 5 * 2 = 10
+// 5 * 10 = 50

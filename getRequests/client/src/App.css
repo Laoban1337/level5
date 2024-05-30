@@ -1,18 +1,18 @@
 .App {
   text-align: center;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-box{
+  border: 4px solid grey;
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  background-color: #f0f0f0;
+  box-shadow: 10 0 0 15px #000;
+  margin-bottom: 4%;
+  margin-top: 125px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,4 +35,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+.form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px; /* Optional: Adjust padding as needed */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  background-color: white; /* Optional: Background color */
+  border-bottom: 1px solid #ccc; /* Optional: Border for visual separation */
+  box-shadow: 2px 2px 4px 8px grey;
+  margin-bottom: 12%;
+  margin-left: 50%; /* Adds space on the left */
+}
+
+.deleteButton {
+  border-radius: 33%;
+
+  background-color: whitesmoke;
+  color: firebrick;
+}
+
+.deleteButton:hover {
+  background-color: firebrick;
+  color: whitesmoke;
+}
+
+.editButton{
+  border-radius: 33%;
+  background-color: cornflowerblue;
+  color: white;
+  margin-left: 1%;
+}
+
+.editButton:hover{
+  background-color: white;
+  color: cornflowerblue;
 }
